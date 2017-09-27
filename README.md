@@ -1,6 +1,8 @@
 # abstractbook
 Small gathering of all the code needed to automatize an abstract book creation
 
+From Edvin Fuglebakk 2016
+
 1. Export excel file from Mach.
 
 2. Run convert.py to get a text file with '|' as field delimiter and '$' as record delimiter, 
