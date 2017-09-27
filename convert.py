@@ -36,10 +36,12 @@ def fix_file(filename):
             f.write(l)
 
 def run_convert(excel_file, new_file):
+    os.system("export LC_ALL=\"en_US.UTF-8\"")
     os.system("ssconvert %s %s -O \"quoting-mode=never charset=MacRoman separator=| eol=windows\"" % (excel_file, new_file))
         
 if __name__ == "__main__":
-    excelfilename = sys.argv[1]
-    textfilename = excelfilename.replace(".xls", ".txt")
+    # excelfilename = sys.argv[1]
+    excelfilename = "BiB2017-Abstract_submission_MODIF.csv"
+    textfilename = excelfilename.replace(".csv", ".txt")
     run_convert(excelfilename, textfilename)
     fix_file(textfilename)
